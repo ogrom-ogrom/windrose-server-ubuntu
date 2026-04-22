@@ -111,7 +111,7 @@ Provided that everything has been successful up to this point, you can now launc
 tmux new -d -s windrose_server "WINEPREFIX=~/.windrose_server xvfb-run -a wine ~/windrose_server/WindroseServer.exe -log -nullrhi"
 ```
 
-To see the detached session, you will need to `attach`. Once you attach it, CTRL + B -> D to detach.
+To see the detached session, you will need to attach. Once you attach, CTRL + B -> D to detach.
 ```ssh
 tmux attach -t windrose_server
 ```
