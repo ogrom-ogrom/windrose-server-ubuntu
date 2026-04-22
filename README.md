@@ -94,6 +94,7 @@ chmod -R u+rwx ~/windrose_server
 
 ```ssh
 WINEPREFIX=~/.windrose_server WINEARCH=win64 WINEDLLOVERRIDES="mscoree,mshtml=" xvfb-run -a wineboot -u
+wineserver -w
 ```
 
 Install Windows dependencies and restart wineserver for good measure.
