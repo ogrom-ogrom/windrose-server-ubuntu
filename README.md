@@ -97,6 +97,8 @@ WINEPREFIX=~/.windrose_server WINEARCH=win64 WINEDLLOVERRIDES="mscoree,mshtml=" 
 ```
 
 Install Windows dependencies and restart wineserver for good measure.
+
+**Note**: Sometimes winetricks can hang on installing vcrun2022. If that happens, I don't bother investigating, I generally just delete /.windrose_server folder, reboot the box and start over with the Wine. This nuclear turn off/on fixes the hanging issue for me. However, keep in mind, this only works when you do not have an actual error otherwise it will keep hanging forever!
 ```ssh
 WINEPREFIX=~/.windrose_server WINEDEBUG=-all xvfb-run -a winetricks -v -q vcrun2022
 wineserver -w
