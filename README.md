@@ -14,7 +14,7 @@ Not really a requirement, but it is worth a quick read https://steamcommunity.co
 - xvfb
 - cabextract
 - Winetricks (vcrun2022 d3dcompiler_47)
-- libvulkan1 libvulkan1:i386 libgl1-mesa-dri:i386 libgl1-mesa-dri:amd64 (Not all of them might be needed; I admit I got lazy here.)
+- libvulkan1 libvulkan1:i386 libgl1-mesa-dri:i386 libgl1-mesa-dri:amd64 (Not all of them might be needed; I admit I got lazy here)
 - steamCMD (Windrose win32 files)
 
 # Configuration
