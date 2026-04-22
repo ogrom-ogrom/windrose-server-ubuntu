@@ -13,7 +13,7 @@ Not really a requirement, but it is worth a quick read https://steamcommunity.co
 - Wine 11.0
 - xvfb
 - cabextract
-- Winetricks (vcrun2022 d3dcompiler_47)
+- Winetricks (vcrun2022)
 - steamCMD (Windrose win32 files)
 
 # Configuration
