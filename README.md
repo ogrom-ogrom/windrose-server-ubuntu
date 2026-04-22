@@ -125,6 +125,7 @@ However, before you celebrate too soon, ensure that ServerDescription.json has b
 ```ssh
 cat windrose_server/R5/ServerDescription.json
 ```
+Be warned that if you want persitent server you will need to look into `systemd`.
 
 ## Final notes
 Do not forget to password-protect your actual Windrose server! 
