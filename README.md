@@ -53,7 +53,7 @@ sudo apt install libvulkan1 libvulkan1:i386 libgl1-mesa-dri:i386 libgl1-mesa-dri
 sudo apt update
 ```
 
-## Installing steamCMD
+## Installing SteamCMD
 This can be found in the multiverse repository; accept the EULAs and install SteamCMD.
 ```
 sudo add-apt-repository multiverse -y
