@@ -43,7 +43,7 @@ The next step is to download Winetricks and ensure you have the latest update.
 **Note: A self-update is important because, without it (at least on my box), it will download an ancient version.**
 ```ssh
 sudo apt install winetricks -y
-sudo winetricks --self-update
+yes | sudo winetricks -q --self-update
 ```
 
 ## Installing SteamCMD
