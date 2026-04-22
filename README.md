@@ -1,5 +1,8 @@
 **Disclaimer: The following scripts and steps have been tested and replicated several times on my Ubuntu 24.04 box. Be warned that I cannot guarantee they will work on yours due to many possible and unforeseen technical issues. After all, no two Linux boxes are identical.**
 
+# Scripts
+The scripts for this page can be found in sh/initial_config.
+
 # Pre-requisite & Assumptions
 - Dedicated headless Linux server with an Ubuntu image installed (VPS or physical with AVX2 support).
 - Knowledge of the Linux SSH terminal.
