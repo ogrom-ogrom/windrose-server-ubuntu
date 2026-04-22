@@ -106,12 +106,12 @@ Sometimes winetricks can hang during the installation of vcrun2022. If that happ
 ## Running your server
 Provided that everything has been successful up to this point, you can now launch the Windrose server! This is the command you will use to start it from now on.
 
-`tmux` is a terminal multiplexer which allows you to create a new detached terminal and run your server process there. 
+`tmux` is a terminal multiplexer used to run server processes in detached sessions.
 ```ssh
 tmux new -d -s windrose_server "WINEPREFIX=~/.windrose_server xvfb-run -a wine ~/windrose_server/WindroseServer.exe -log -nullrhi"
 ```
 
-To see the detached terminal, you will need to attach. Once you attach it, CTRL + B -> D to detach it.
+To see the detached session, you will need to `attach`. Once you attach it, CTRL + B -> D to detach.
 ```ssh
 tmux attach -t windrose_server
 ```
