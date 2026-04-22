@@ -14,7 +14,6 @@ Not really a requirement, but it is worth a quick read https://steamcommunity.co
 - xvfb
 - cabextract
 - Winetricks (vcrun2022 d3dcompiler_47)
-- libvulkan1 libvulkan1:i386 libgl1-mesa-dri:i386 libgl1-mesa-dri:amd64 (Not all of them might be needed; I admit I got lazy here)
 - steamCMD (Windrose win32 files)
 
 # Configuration
@@ -45,12 +44,6 @@ The next step is to download Winetricks and ensure you have the latest update.
 ```ssh
 sudo apt install winetricks -y
 sudo winetricks --self-update
-```
-
-Finally, install all the graphical dependencies and update for good measure.
-```ssh
-sudo apt install libvulkan1 libvulkan1:i386 libgl1-mesa-dri:i386 libgl1-mesa-dri:amd64 -y
-sudo apt update
 ```
 
 ## Installing SteamCMD
@@ -105,17 +98,22 @@ WINEPREFIX=~/.windrose_server WINEARCH=win64 WINEDLLOVERRIDES="mscoree,mshtml=" 
 
 Install Windows dependencies and restart wineserver for good measure.
 ```ssh
-WINEPREFIX=~/.windrose_server WINEDEBUG=-all xvfb-run -a winetricks -v -q vcrun2022 d3dcompiler_47
+WINEPREFIX=~/.windrose_server WINEDEBUG=-all xvfb-run -a winetricks -v -q vcrun2022
 wineserver -w
 ```
 
 ## Running your server
 Provided that everything has been successful up to this point, you can now launch the Windrose server! This is the command you will use to start it from now on.
+
+`tmux` is a terminal multiplexer which allows you to create a new detached terminal and run your server process there. 
 ```ssh
-WINEPREFIX=~/.windrose_server xvfb-run -a wine ~/windrose_server/WindroseServer.exe -log -nullrhi
+tmux new -d -s windrose_server "WINEPREFIX=~/.windrose_server xvfb-run -a wine ~/windrose_server/WindroseServer.exe -log -nullrhi"
 ```
 
-As with the previous steps, you will see a number of errors which should stop appearing after a certain point.
+To see the detached terminal, you will need to attach. Once you attach it, CTRL + B -> D to detach it.
+```ssh
+tmux attach -t windrose_server
+```
 
 You can quickly check if your server is actually running by checking a separate terminal. If you can see a spawned process with significant memory and CPU usage, then you are sorted.
 ```ssh
